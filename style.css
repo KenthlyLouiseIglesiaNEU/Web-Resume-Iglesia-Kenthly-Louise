@@ -148,3 +148,12 @@ body {
   .page { width: 95%; }
   .nav-right { display:none; }
 }
+.accordion-panel ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.accordion-panel li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
