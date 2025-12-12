@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Kenthly Louise Iglesia - Web Resume</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">Kenthly Iglesia — Resume</div>
+    <ul class="nav-right">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#awards">Awards</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <header class="profile">
+      <img src="profile.jpg" alt="Kenthly Louise N. Iglesia" class="profile-img">
+      <div class="profile-info">
+        <h1>Kenthly Louise N. Iglesia</h1>
+        <div class="contact-info">
+          <div><strong>Location:</strong> Quezon City, Manila</div>
+          <div><strong>Contact:</strong> 0956 532 954</div>
+          <div><strong>Email:</strong> kenthlylouiseiglesia@gmail.com</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Objective</h2>
+      <p>Motivated and adaptable aspiring IT Support Specialist with a passion for technology,
+        innovation, and continuous learning. Seeking opportunities to contribute technical skills
+        and grow within a forward-thinking organization.</p>
+    </section>
+
+    <!-- Accordion/Drop bars -->
+    <section class="accordion-area">
+
+      <details id="skills" class="accordion" >
+        <summary class="accordion-summary">Skills</summary>
+        <div class="accordion-panel">
+          <div class="tags">
+            <span class="tag">IT Support</span>
+            <span class="tag">Troubleshooting</span>
+            <span class="tag">Adaptability</span>
+            <span class="tag">Communication</span>
+            <span class="tag">Continuous Learning</span>
+            <span class="tag">Team Collaboration</span>
+          </div>
+        </div>
+      </details>
+
+      <details id="experience" class="accordion">
+        <summary class="accordion-summary">Experience</summary>
+        <div class="accordion-panel">
+          <p>Seeking first major role in IT support. Experienced in academic tech projects,
+            hands-on troubleshooting, and collaborative environments.</p>
+
+          <div class="exp-item">
+            <strong>2023 - 2024 — Shell.co — Junior Programmer</strong>
+            <p>Worked with the development team and managed website backend tasks.</p>
+          </div>
+
+          <div class="exp-item">
+            <strong>2022 - 2023 — Fanta.co — Web Designer</strong>
+            <p>Managed website design, content, branding and logo design while collaborating with the development team.</p>
+          </div>
+        </div>
+      </details>
+
+      <details id="education" class="accordion">
+        <summary class="accordion-summary">Education</summary>
+        <div class="accordion-panel">
+          <div class="edu-item">
+            <strong>New Era University (Main Campus)</strong>
+            <div>Bachelor’s Program — 2nd Year College</div>
+            <div class="muted">2024–2026</div>
+          </div>
+        </div>
+      </details>
+
+      <details id="awards" class="accordion">
+        <summary class="accordion-summary">Awards & Certifications</summary>
+        <div class="accordion-panel">
+          <ul class="cert-list">
+            <li>
+              <strong>SQL and Relational Databases 101</strong> —
+              <a href="https://courses.cognitiveclass.ai/certificates/1c1113cac2374ba8bbf24688eaf6d355" target="_blank" rel="noopener">View Certificate</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+    </section>
+  </main>
+
+  <script>
+    // Optional: close other accordions when one opens (makes it behave like an "accordion")
+    document.querySelectorAll('.accordion').forEach((d) => {
+      d.addEventListener('toggle', (e) => {
+        if (d.open) {
+          document.querySelectorAll('.accordion').forEach((other) => {
+            if (other !== d) other.open = false;
+          });
+        }
+      });
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('.navbar a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
